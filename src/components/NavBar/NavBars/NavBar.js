@@ -1,24 +1,43 @@
 import './NavBar.css'
+import Button from '../../Button/Button'
 
 
-const NavBar = () => {
+
+const NavBar = ({title, ...rest }) => {
+
+  const handleTerror = () => {
+    console.log('terror')
+  }
+  const handleCooperativo = () => {
+    console.log('cooperativo')
+  }
+  const handleEstrategia = () => {
+    console.log('estrategia')
+  }
 
     return(
       <nav className="NavBar">
           <div>
-                <p> Tienda-Online</p>
+                <h3> {title} </h3>
               
           </div>
-        <button className="option">accion</button>
-        <button className="option">estrategia</button>
-        <button className="option">FPS</button>
-        <button className="option">horror</button>
-        <button className="option">deportes</button>
-        <button className="option">cooperativo</button>
+
+          <div className="categories" >
+
+            <Button label='terror' backgroundColor='black' colorText='crimson' handleClick={handleTerror}/>
+            <Button label='cooperativo' handleClick={handleCooperativo} />
+            <Button label='estrategia' handleClick={handleEstrategia}/>
+
+
+          </div>
+
+        
+          
+     
 
       </nav>
     )
   
-  }
+  } 
 
   export default NavBar
