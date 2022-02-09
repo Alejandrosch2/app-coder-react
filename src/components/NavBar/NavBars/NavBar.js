@@ -12,7 +12,7 @@ const NavBar = () => {
         <button className="option">accion</button>
         <button className="option">estrategia</button>
         <button className="option">FPS</button>
-        <button className="option">indie</button>
+        <button className="option">horror</button>
         <button className="option">deportes</button>
         <button className="option">cooperativo</button>
 
