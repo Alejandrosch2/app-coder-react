@@ -1,20 +1,22 @@
 
 import './App.css';
 import NavBar from './components/NavBar/NavBars/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import Button from './components/Button/Button';
+import { useState } from 'react';
+import ItemCount from './components/itemCount/itemCount';
 
 
 
 function App() {
+  const [show, setShow] = useState(true)
 
   return (
     <div className="App">
 
       <NavBar title="ecommerce" color="red" />
     
-
-     <ItemListContainer/>
+      <button onClick={() => setShow(!show)}>Mostrar</button>
+      {show ? <ItemCount stock={5} initial={0} /> : null}
+     
   
     </div>
   );
