@@ -34,7 +34,7 @@ const NavBar = ({title, ...rest }) => {
 
         <CartWidget/>
           
-     
+        
 
       </nav>
     )
